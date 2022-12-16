@@ -32,6 +32,11 @@
     <plugin.version.maven-resources-plugin>3.3.0</plugin.version.maven-resources-plugin>
     <plugin.version.maven-shade-plugin>3.4.1</plugin.version.maven-shade-plugin>
     <plugin.version.maven-surefire-plugin>3.0.0-M7</plugin.version.maven-surefire-plugin>
+
+    <!-- Google dependencies -->
+    <google-auth-library-oauth2-http.version>0.21.1</google-auth-library-oauth2-http.version>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <google.calendar.services.version>v3-rev20220715-2.0.0</google.calendar.services.version>
   </properties>
 
   <dependencies>
@@ -47,6 +52,18 @@
       <version>${version.connector-core}</version>
       <scope>provided</scope>
     </dependency>
+
+    <dependency>
+      <groupId>com.google.apis</groupId>
+      <artifactId>google-api-services-calendar</artifactId>
+      <version>${google.calendar.services.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.google.auth</groupId>
+      <artifactId>google-auth-library-oauth2-http</artifactId>
+      <version>${google-auth-library-oauth2-http.version}</version>
+    </dependency>
+
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
